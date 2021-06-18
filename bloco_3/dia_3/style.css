@@ -26,3 +26,16 @@ li {
 li em {
   font-weight: bolder;
 }
+
+li:not(:nth-child(n+4)) {
+  color: blue;
+}
+
+.rosinha {
+  background-color: pink;
+}
+
+.hoverzin li:hover{
+  font-weight: bolder;
+  color: purple;
+}
