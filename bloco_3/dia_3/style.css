@@ -1,4 +1,34 @@
-div::first-line:hover {
+div:nth-of-type(1) {
   color: blue;
-  
+  font-family: cursive;
+}
+
+div:hover {
+  background-color: cornflowerblue;
+}
+
+div:nth-of-type(2) {
+  color: rgb(231, 14, 14);
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+div:nth-of-type(3) {
+  color: green;
+  font-family: fantasy;
+  font-size: larger;
+}
+
+div:nth-of-type(4) {
+  color: grey;
+  font-family: monospace;
+}
+
+div:nth-of-type(5) {
+  color: aqua;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+div:nth-of-type(2n+1) {
+  font-style: italic;
 }
