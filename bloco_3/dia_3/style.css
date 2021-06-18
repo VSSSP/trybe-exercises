@@ -1,16 +1,4 @@
-h1, p{
-  text-align: center;
-}
-
-li:hover {
-  background-color: aqua;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-.lista {
-  text-align: center;
+div::first-line:hover {
+  color: blue;
+  
 }
