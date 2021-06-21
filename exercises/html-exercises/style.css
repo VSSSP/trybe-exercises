@@ -1,8 +1,12 @@
-.header {
+body {
+  background-color: rgb(255, 229, 196);
+}
+
+.header { 
   background-image:url(https://pm1.narvii.com/6502/0872de236946b41075bb4e8013a692a1de60251f_hq.jpg);
   padding: 40px;
   max-width: fit-content;
-  color: rgb(238, 255, 0);
+  color: rgb(255, 255, 255);
   border-radius: 30px;
   display: inline-block;
   margin-left: 25%;
@@ -13,11 +17,39 @@
 
 .nav li {
   display: inline;
-  margin: 20px;
+  margin: 10px;
 }
+
 .nav {
-  margin-left: 35%;
+  margin-left: 38%;
   background-color: burlywood;
-  max-width: fit-content;
+  max-width: 330px;
   padding-left: 0px;
+  border-radius: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.article {
+  max-width: 50%;
+  text-align: justify;
+  margin-left: 25%;
+}
+
+.article li {
+  text-align: center;
+  list-style-type: none;
+  font-style: italic;
+}
+
+.article h2 {
+  text-align: center;
+}
+
+.fatos {
+  text-align: center;
+}
+
+div {
+  display: inline-block;
 }
