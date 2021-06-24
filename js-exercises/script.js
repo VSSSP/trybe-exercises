@@ -8,3 +8,4 @@ if (custo >= 0 && venda >= 0) {
 } else {
   console.log("Error, os valores não podem ser negativos");
 };
+1dasdadasdasdasdasdasd
