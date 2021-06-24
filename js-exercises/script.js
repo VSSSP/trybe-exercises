@@ -1,13 +1,10 @@
-let a = 15
-let b = 37
-let c = -74
+let a = 50
+let b = 50
+let c = 80
 
-if (c > 0) {
-  console.log("positive")
-}
-else if (c = 0) {
-  console.log(0)
+if (a + b + c === 180) {
+  console.log(true)
 }
 else {
-  console.log("negative")
+  console.log(false)
 }
