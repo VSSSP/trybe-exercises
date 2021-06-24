@@ -1,13 +1,13 @@
 let a = 15
 let b = 37
-let c = 74
+let c = -74
 
-if (a > b && a > c) {
-  console.log(a)
+if (c > 0) {
+  console.log("positive")
 }
-else if (b > a && b > c){
-  console.log(b)
+else if (c = 0) {
+  console.log(0)
 }
 else {
-  console.log(c)
+  console.log("negative")
 }
