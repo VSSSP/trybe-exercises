@@ -1,10 +1,10 @@
-let num1 = 2
-let num2 = 141
-let num3 = 23
+let custo = 12
+let venda = 122
 
-let impar = false
-
-if (num1 % 2 != 0 || num2 % 2 != 0 || num3 % 2 != 0)  {
-  impar = true;
-}
-console.log(impar)
+if (custo >= 0 && venda >= 0) {
+  let custototal = custo * 1.2;
+  let lucro = (venda - custototal) * 1000;
+  console.log(lucro);
+} else {
+  console.log("Error, os valores não podem ser negativos");
+};
