@@ -1,16 +1,23 @@
-let pecaXadrez = 'Peão'
+let nota = 45
 
-switch (pecaXadrez.toLowerCase()) {
-  case 'rei':
-    console.log('Rei anda apenas uma casa pra qualquer lugar');
-    break;
-  case 'rainha':
-    console.log('A rainha anda para qualquer direção e quantas casas quiser');
-    break;
-  case 'bispo':
-    console.log('O bispo pode andar para quantas casas quiser, apenas pelas diagonais')
-    break;
-  case 'peão':
-    console.log('O peão só anda pra frente, exceto na primeira rodada que podera andar duas casas. Ele só mata pelas diagonais da frente')
-    break;
+if (nota >= 90) {
+  console.log ('A');
+}
+else if (nota >= 80) {
+  console.log ('B');
+}
+else if (nota >= 70) {
+  console.log ('C');
+}
+else if (nota >= 60) {
+  console.log ('D');
+}
+else if (nota >= 50) {
+  console.log ('E');
+}
+else if (nota < 0 || nota > 100) {
+  console.log ('Erro, nota maior que 100 ou menor que 0')
+}
+else {
+  console.log('F')
 }
