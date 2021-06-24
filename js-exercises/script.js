@@ -1,23 +1,24 @@
-let nota = 45
+let num1 = 2
+let num2 = 141
+let num3 = 23
 
-if (nota >= 90) {
-  console.log ('A');
-}
-else if (nota >= 80) {
-  console.log ('B');
-}
-else if (nota >= 70) {
-  console.log ('C');
-}
-else if (nota >= 60) {
-  console.log ('D');
-}
-else if (nota >= 50) {
-  console.log ('E');
-}
-else if (nota < 0 || nota > 100) {
-  console.log ('Erro, nota maior que 100 ou menor que 0')
+if (num1 % 2 === 0) {
+  console.log (true)
 }
 else {
-  console.log('F')
+  console.log(false)
+}
+
+if (num2 % 2 === 0) {
+  console.log (true)
+}
+else {
+  console.log(false)
+}
+
+if (num3 % 2 === 0) {
+  console.log (true)
+}
+else {
+  console.log(false)
 }
