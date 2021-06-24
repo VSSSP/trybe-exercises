@@ -1,3 +1,5 @@
-let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
-menu.push('slack');
-console.log(menu);
+let groceryList = ['Arroz', 'Feijão', 'Alface', 'Melancia'];
+
+for (let index = 0; index < groceryList.length; index ++) {
+  console.log(groceryList[index]);
+}
