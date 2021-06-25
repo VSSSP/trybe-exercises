@@ -1,10 +1,11 @@
 let n = 5
 let asteriscos = '*'
-let espaco = ''
+let espaco = '*'
+let espacamento = ''
 
 for (let index = 0; index < n; index += 1) {
+  console.log (espaco)
   espaco = espaco + asteriscos
 }
-for (let index = 0; index < n; index += 1) {
-  console.log (espaco)
-}
+
+console.log (espaco + espacamento)
