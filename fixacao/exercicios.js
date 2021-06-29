@@ -45,14 +45,36 @@
 
 // console.log(menorNumero([2, 4, 6, 7, 10, 0, -3]))
 
-function nomeGrande (nome) {
-  let maiorNome = 'a'
-  for (let key in nome) {
-    if (nome.length > maiorNome.length) {
-      maiorNome = nome[key]
+// function nomeGrande (nome) {
+//   let maiorNome = 'a'
+//   for (let key in nome) {
+//     if (nome.length > maiorNome.length) {
+//       maiorNome = nome[key]
+//     }
+//   }
+// return maiorNome
+// }
+
+// console.log (nomeGrande(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']))
+
+function repetido(numero) {
+  let repetido = 0;
+  let gravaNumero = 0;
+  let numero1 = 0;
+  for (let key in numero) {
+    let verificaNumero = numero[key];
+    for (let key2 in numero) {
+      if (verificaNumero === numero[key2]) {
+        gravaNumero += 1;
+      }
     }
+    if (gravaNumero > repetido) {
+      repetido = gravaNumero;
+      numero1 = key;
+    }
+    numero1 = 0;
   }
-return maiorNome
+  return numero[numero1]
 }
 
-console.log (nomeGrande(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']))
+console.log(repetido([2, 3, 2, 5, 8, 2, 3]));
