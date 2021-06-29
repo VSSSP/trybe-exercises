@@ -57,24 +57,38 @@
 
 // console.log (nomeGrande(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']))
 
-function repetido(numero) {
-  let repetido = 0;
-  let gravaNumero = 0;
-  let numero1 = 0;
-  for (let key in numero) {
-    let verificaNumero = numero[key];
-    for (let key2 in numero) {
-      if (verificaNumero === numero[key2]) {
-        gravaNumero += 1;
-      }
-    }
-    if (gravaNumero > repetido) {
-      repetido = gravaNumero;
-      numero1 = key;
-    }
-    numero1 = 0;
+
+// exercicio 5 
+
+// function repetido(numero) {
+//   let repetido = 0;
+//   let gravaNumero = 0;
+//   let numero1 = 0;
+//   for (let key in numero) {
+//     let verificaNumero = numero[key];
+//     for (let key2 in numero) {
+//       if (verificaNumero === numero[key2]) {
+//         gravaNumero += 1;
+//       }
+//     }
+//     if (gravaNumero > repetido) {
+//       repetido = gravaNumero;
+//       numero1 = key;
+//     }
+//     numero1 = 0;
+//   }
+//   return numero[numero1]
+// }
+
+// console.log(repetido([2, 3, 2, 5, 8, 2, 3]));
+
+function somaTudo(numero) {
+  let numeroArmazenado = 0
+  for (let index = 0; index <= numero; index += 1) {
+    numeroArmazenado = index + numeroArmazenado
+    
   }
-  return numero[numero1]
+  return numeroArmazenado
 }
 
-console.log(repetido([2, 3, 2, 5, 8, 2, 3]));
+console.log (somaTudo(5))
