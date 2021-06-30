@@ -82,13 +82,32 @@
 
 // console.log(repetido([2, 3, 2, 5, 8, 2, 3]));
 
-function somaTudo(numero) {
-  let numeroArmazenado = 0
-  for (let index = 0; index <= numero; index += 1) {
-    numeroArmazenado = index + numeroArmazenado
+// function somaTudo(numero) {
+//   let numeroArmazenado = 0
+//   for (let index = 0; index <= numero; index += 1) {
+//     numeroArmazenado = index + numeroArmazenado
     
-  }
-  return numeroArmazenado
-}
+//   }
+//   return numeroArmazenado
+// }
 
-console.log (somaTudo(5))
+// console.log (somaTudo(5))
+
+let car = {
+  model: 'A3 Sedan',
+  manufacturer: 'Audi',
+  year: 2020
+}; 
+
+for (let index in car){
+    console.log(car)
+} // { model: 'A3 Sedan', manufacturer: 'Audi', year: 2020 }
+
+for (let index in car){
+    console.log(car[index])
+}
+//  A3 Sedan /  Audi / 2020
+
+for (let index in car){
+    console.log(index)
+} // model / manufacturer / year
