@@ -61,3 +61,27 @@ const element6 = document.createElement ('div');
 element6.className = 'small-image';
 element6.src = 'https://picsum.photos/200'
 element4.appendChild(element6)
+
+const element7 = document.createElement('ul')
+element5.appendChild(element7)
+const lista = ['um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+for (let i of lista) {
+  const element8 = document.createElement('li')
+  element8.innerHTML = i
+  element7.appendChild(element8)
+}
+
+const element9 = document.createElement('h3')
+element1.appendChild(element9)
+
+const element10 = document.createElement('h3')
+element1.appendChild(element10)
+
+const element11 = document.createElement('h3')
+element1.appendChild(element11)
+
+element.className = 'title'
+
+element9.className = 'description'
+element10.className = 'description'
+element11.className = 'description'
