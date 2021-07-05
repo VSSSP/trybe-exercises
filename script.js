@@ -85,3 +85,7 @@ element.className = 'title'
 element9.className = 'description'
 element10.className = 'description'
 element11.className = 'description'
+
+const divRetirar = document.getElementsByClassName('left-content')
+
+element2.removeChild(divRetirar)
