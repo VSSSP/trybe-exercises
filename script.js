@@ -1,37 +1,7 @@
-// let pai = document.querySelector('#pai');
-// let irmaoElemento = document.createElement('div');
-// irmaoElemento.id = 'filhoElementoOndeVoceEsta'
-// pai.appendChild(irmaoElementoOndeVoceEsta)
-
-// console.log(irmaoElementoOndeVoceEsta)
-
-
-// // irmão pro 'elemento onde vc esta'
-// const pai = document.getElementById('pai');
-// const irmaoElementoOndeVoceEsta = document.createElement('div');
-// irmaoElementoOndeVoceEsta.id = 'irmaoElementoOndeVoceEsta';
-// pai.appendChild(irmaoElementoOndeVoceEsta)
-// // console.log(irmaoElementoOndeVoceEsta)
-// ;
-// // filho do elemento onde vc esta
-// const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta')
-// const filhoDoElemento = document.createElement('div')
-// filhoDoElemento.id = 'filhoDoElemento'
-// elementoOndeVoceEsta.appendChild(filhoDoElemento)
-// // console.log (filhoDoElemento)
-
-// const primeiroFilhodoFilho = document.getElementById('primeiroFilhodoFilho')
-// const filhoMaisNovo = document.createElement('div')
-// filhoMaisNovo.id = 'filhoMaisNovo'
-// primeiroFilhodoFilho.appendChild(filhoMaisNovo)
-
-// const body = document.querySelector('body')
-
-// const element = document.createElement('h1')
-
-// body.appendChild (element)
-
-// document.querySelector('h1')[0].innerText = 'Exercício 5.2 - JavaScript'
+const body = document.querySelector('body')
+const element = document.createElement('h1')
+body.appendChild (element)
+document.querySelector('h1')[0].innerText = 'Exercício 5.2 - JavaScript'
 
 const element = document.createElement('h1');
 element.innerHTML = 'Exercício 5.2 - JavaScript DOM'; 
@@ -86,6 +56,15 @@ element9.className = 'description'
 element10.className = 'description'
 element11.className = 'description'
 
-const divRetirar = document.getElementsByClassName('left-content')
-
+const divRetirar = document.getElementsByClassName('left-content')[0]
 element2.removeChild(divRetirar)
+
+const margem = document.getElementsByClassName('right-content')[0];
+margem.style.marginRight = 'auto';
+
+const background = document.getElementsByClassName('center-content');
+background.parentNode.style.backgroundColor = 'green'
+
+element7.lastChild.remove()
+element7.lastChild.remove()
+
