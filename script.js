@@ -1,70 +1,35 @@
-const firstDiv = document.getElementById('first-div');
-const secondDiv = document.getElementById('second-div');
-const thirdDiv = document.getElementById('third-div');
-const input = document.getElementById('input');
-const myWebpage = document.getElementById('my-spotrybefy'); // já criou todas as constantes necessarias para fazer os exercicios
+function createDaysOfTheWeek() {
+  const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
+  const weekDaysList = document.querySelector('.week-days');
 
+  for (let index = 0; index < weekDays.length; index += 1) {
+    const days = weekDays[index];
+    const dayListItem = document.createElement('li');
+    dayListItem.innerHTML = days;
 
-//  Copie esse arquivo e edite apenas ele;
+    weekDaysList.appendChild(dayListItem);
+  };
+};
 
-//  Crie uma função que adicione a classe 'tech' ao elemento selecionado;
-// 1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
-function tiraOTech(evento) {
-  techElement = document.querySelector('.tech'); // seleciona a classe tech
-  techElement.classList.remove('tech'); // remove a classe tech 
-  evento.target.classList.add('tech'); // no target, 
-  input.value = '';
+createDaysOfTheWeek();
 
+// Escreva seu código abaixo.
+
+const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+
+const dias = document.querySelector('#days')
+
+for (let i = 0; i < dezDaysList.length; i += 1) {
+  let diasDoMes = dezDaysList[i]
+  let osDiasDoMes = document.createElement('li');
+  osDiasDoMes.innerText = diasDoMes
+  osDiasDoMes.className = 'day'
+  if (dezDaysList[i] === 24 || dezDaysList[i] === 25 || dezDaysList[i] === 31) {
+    osDiasDoMes.className = 'holiday'
+  } 
+  else if (dezDaysList[i] === 4 || dezDaysList[i] === 11 || dezDaysList[i] === 18 || dezDaysList[i] === 25) {
+    osDiasDoMes.className = 'friday'
+  }
+
+  dias.appendChild(osDiasDoMes);
 }
-
-firstDiv.addEventListener('click', tiraOTech);
-secondDiv.addEventListener('click', tiraOTech);
-thirdDiv.addEventListener('click', tiraOTech);
-
-//  Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
-// com a classe 'tech';
-
-  input.addEventListener('input', function(evento1) {
-    const techElement = document.querySelector('.tech');
-    techElement.innerText = evento1.target.value
-
-  })
-
-
-//  Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
-// redirecione para alguma página;
-// 1. Que tal redirecionar para seu portifólio?
-
-myWebpage.addEventListener('dblclick', function() {
-  window.location.replace('http://vsssp.github.io/')
-})
-
-//  Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
-// a cor do mesmo;
-
-myWebpage.addEventListener('mouseover', function (evento2) {
-  evento2.target.style.color = 'green';
-})
-
-myWebpage.addEventListener('mouseleave', function (evento2) {
-  evento2.target.style.color = 'black'
-})
-
-myWebpage.addEventListener ('mouseover', function (event) {
-  event.target.style.backgroundColor = 'white'
-})
-
-// Segue abaixo um exemplo do uso de event.target:
-
-
-// function resetText(event) {
-//   // O Event é passado como um parâmetro para a função.
-//   event.target.innerText = 'Opção reiniciada';
-  // O event possui várias propriedades, porém a mais usada é o event.target,
-  // que retorna o objeto que disparou o evento.
-// }
-
-firstDiv.addEventListener('dblclick', resetText);
-// Não precisa passar o parâmetro dentro do addEventListener. O próprio
-// navegador fará esse trabalho por você, não é legal? Desse jeito, o
-// event.target na nossa função retornará o objeto 'divUm'.
