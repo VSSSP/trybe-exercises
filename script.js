@@ -33,3 +33,15 @@ for (let i = 0; i < dezDaysList.length; i += 1) {
 
   dias.appendChild(osDiasDoMes);
 }
+
+function createHolidayButton(buttonName) {
+  let buttonContainer = document.querySelector('.buttons-container');
+  let newButton = document.createElement('button');
+  let newButtonID = 'btn-holiday';
+
+  newButton.innerHTML = buttonName;
+  newButton.id = newButtonID;
+  buttonContainer.appendChild(newButton);
+};
+
+createHolidayButton('Feriados');
