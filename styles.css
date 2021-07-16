@@ -8,3 +8,11 @@
   text-shadow: mediumblue;
   color: dimgray;
 }
+
+label {
+  margin-bottom: 10px;
+}
+
+body {
+  margin-left: 5%;
+}

@@ -6,13 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
   <h1 id="titulo">Cadastre o seu curriculo!</h1>
-  <fieldset>
+  <fieldset id="field1">
   <form action="">
     <label for="input-name">Nome</label>
     <input type="text" max="40" placeholder="João Tavares" required id="input-name">
+    <br>
     <label for="input-email">E-mail</label>
     <input type="email" max="50" placeholder="joaot@hotmail.com" required id="input-email">
     <br>
@@ -21,10 +23,13 @@
     <br>
     <label for="input-endereco">Endereço</label>
     <input type="text" max="200" placeholder="Rua dos bobos, numero 0" required id="input-email">
+    <br>
     <label for="input-cidade">Cidade</label>
     <input type="text" max="28" placeholder="Beo Rizonte" required id="input-cidade">
+    <br>
     <label for="estados">Selecione seu Estado</label>
     <select name="Estado" id="estados"></select>
+    <br>
     <label for="input-logra1">Apartamento</label>
     <input type="radio" name="logra" required id="input-logra1">
     <label for="input-logra2">Casa</label>
