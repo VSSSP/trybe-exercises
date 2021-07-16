@@ -5,24 +5,43 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Cadastre o seu curriculo!</h1>
+  <h1 id="titulo">Cadastre o seu curriculo!</h1>
   <fieldset>
   <form action="">
-    <label for="input-name">Digite seu nome</label>
+    <label for="input-name">Nome</label>
     <input type="text" max="40" placeholder="João Tavares" required id="input-name">
-    <br>
-    <label for="input-email">Digite seu e-mail</label>
+    <label for="input-email">E-mail</label>
     <input type="email" max="50" placeholder="joaot@hotmail.com" required id="input-email">
     <br>
-    <label for="input-cpf">Digite seu CPF (Apenas números)</label>
+    <label for="input-cpf">CPF (Apenas números)</label>
     <input type="text" max="11" placeholder="00255489635" required id="input-cpf">
-    <label for="input-endereco">Digite seu endereço</label>
+    <br>
+    <label for="input-endereco">Endereço</label>
     <input type="text" max="200" placeholder="Rua dos bobos, numero 0" required id="input-email">
-    <button type="submit">Enviar curriculo</button>
+    <label for="input-cidade">Cidade</label>
+    <input type="text" max="28" placeholder="Beo Rizonte" required id="input-cidade">
+    <label for="estados">Selecione seu Estado</label>
+    <select name="Estado" id="estados"></select>
+    <label for="input-logra1">Apartamento</label>
+    <input type="radio" name="logra" required id="input-logra1">
+    <label for="input-logra2">Casa</label>
+    <input type="radio" name="logra" required id="input-logra2">
+    <br>
   </form>
-
   </fieldset>
+  <fieldset>
+    <p id="lastJob">Dados do seu ultimo emprego</p>
+    <label for="resumoCurriculo">
+      <p>Escreva um resumo do seu curriculo.</p>
+      <textarea name="resumo" id="resumoCurriculo" cols="30" rows="10"></textarea>
+    </label>
+    <label for="">
+      <input type="text" id="data" max="8">
+    </label>
+  </fieldset>
+  <script src="script.js"></script>
 </body>
 </html>
