@@ -4,15 +4,22 @@
 
 const assert = require('assert');
 
-const summationof = () => 1
+const summationof = (number) => {
+    let soma = 0
+    for (let index = 1; index <= number; index += 1) {
+        soma += index;
+    }
+    return soma
+}
 
 assert.strictEqual(typeof(summationof), 'function', 'Deu erro')
 assert.strictEqual(summationof(1), 1);
+assert.strictEqual(summationof(5), 15);
+
+// THROW !!!!! TRATA EXCESSOES 
 
 // começa o código fazendo ele falhar
-
-
-
+// crie um algoritmo sustentável 
 // const { assert } = require("console");
 
 // Basicamente, existem três dimensões de qualidade que precisam ser consideradas: Confiança : O sistema é resistente a falhas durante a execução, isto é, não entra em loop , não interrompe a execução por falta de recursos. Funcionalidade : O sistema se comporta conforme o que foi definido em seus requisitos. Performance : O sistema tem um tempo de resposta adequado e aceitável, mesmo quando submetido a um volume de processamento próximo de situações reais ou de pico.
@@ -60,11 +67,13 @@ assert.strictEqual(summationof(1), 1);
 // assert.notStrictEqual(expected, 4, 'Um mais dois é igual a três (e não quatro!)'); // Checa se o primeiro e segundo argumentos são diferentes (!==)
 
 // Lançamento de erros e exceções <<
+// THROW !!!!! TRATA EXCESSOES 
+// ----------------------------------------------------------------
 
 // const assert = require('assert');
 
 // function division(x, y) {
-//   if (y === 0) throw new Error('parameter y must not be 0'); <<<<<<<<<<<
+//   if (y === 0) throw new Error('parameter y must not be 0'); <<<<<<<<<<<!!@!@#$!@$! com e maiusculo
 //     // Queremos que o código retorne um erro com uma mensagem específica
 //   // caso o parâmetro y seja 0. Por isso lançamos uma exceção se essa condição
 //   // for verdadeira, o que irá interromper a execução da função.
@@ -72,7 +81,9 @@ assert.strictEqual(summationof(1), 1);
 // }
 
 // assert.strictEqual(division(10, 2), 5); // OK
-// assert.throws(() => { division(10, 0); }, /^Error: parameter y must not be 0$/); // OK
+// assert.throws(() => { division(10, 0); }, /^Error: parameter y must not be 0$/); // OK !!!!!!!!!
+// ele espera que exista essa exceção  !!!!! tem que usar lá tb, testa se a exceção ta funcionando
+// o teste é apenas um teste
 
 // TEST DRIVEN DEVELOPMENT 
 
@@ -86,4 +97,4 @@ assert.strictEqual(summationof(1), 1);
 // const sum = (value1, value2) => value1 + value 2
 // numero em string contatena com numero number
 
-
+// if (typeof(parametro) !== 'number')
