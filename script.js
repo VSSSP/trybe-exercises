@@ -70,7 +70,7 @@
 // numbers.forEach(multipliesFor2);
 
 // const names = ['Bianca', 'Camila', 'Fernando', 'Ana Roberta'];
-
+// a
 // const convertToUpperCase = (name, index) => {
 //   names[index] = name.toUpperCase();
 // };
