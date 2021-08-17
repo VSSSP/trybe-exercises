@@ -1,0 +1,33 @@
+API
+
+Em resumo, uma API permite que aplicações se comuniquem umas com as outras, servindo de "ponte" para elas. Uma API não é um banco de dados ou um servidor, mas a responsável pelo controle dos pontos de acesso a eles, através de um conjunto de rotinas e padrões de programação.
+Toda API é um back-end, mas nem todo back-end é uma API
+
+Json
+
+JSON significa Java Script Object Notation e é basicamente uma forma de representarmos dados como objetos Javascript:
+
+{
+  "trybers": [
+    {
+      "name": "Lauro Cesar",
+      "github": "lauroandrade",
+      "status": "#vqv"
+    }
+  ]
+}
+
+Como utilizar APIs na minha aplicação?
+
+APIs podem incrementar as funcionalidades da sua aplicação e colocá-la em um outro patamar. Você pode adicionar mapas, receber dados sobre o tempo e outras informações úteis.
+
+> Encontre uma API pública, que seja bem documentada e mantida;
+> Leia a documentação para ter certeza de que aquela API resolve o problema que você deseja solucionar;
+> Entenda o formato dos dados disponíveis;
+> Faça requests e receba responses da API com os dados que você deseja receber.
+---------
+
+Você pode fazer requisições a uma API de várias formas. Uma delas é no terminal.
+No exemplo a seguir, vamos fazer um request do tipo GET para uma API , que retorna um JSON como response
+
+wget 'https://pokeapi.co/api/v2/pokemon/ditto' -O - -q
