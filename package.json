@@ -1,0 +1,23 @@
+{
+  "name": "trybe-exercises",
+  "version": "1.0.0",
+  "description": "Repositório de exercicios da Trybe",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VSSSP/trybe-exercises.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VSSSP/trybe-exercises/issues"
+  },
+  "homepage": "https://github.com/VSSSP/trybe-exercises#readme",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}

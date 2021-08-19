@@ -1,0 +1,68 @@
+Ao escrever testes, você precisa verificar que valores satisfazem a algumas condições. A função expect é utilizada para dar acesso a um conjunto de métodos chamados matchers . Esses métodos permitem testar valores de diversas formas. expect recebe o valor a ser testado e retorna um objeto representando uma expectation . Sobre esse objeto pode-se chamar os matchers que Jest fornece.
+Vamos passar pelos matchers mais comuns. É interessante saber que existem muitos outros matchers que podem ser encontrados na documentação oficial do Jest . No dia a dia, é normal quem desenvolve ler documentação , porque na maior parte das vezes esse é o local com mais informações atualizadas. Conforme as ferramentas que conhecemos passarem a ter mais opções de uso e funcionalidades, será normal recorrermos à documentação para aprendermos a utilizá-las melhor.
+
+-- toBe --
+
+toBe , que utilizamos no exemplo anterior, é o matcher mais simples. Esse matcher testa igualdade estrita entre o valor passado para expect e seu argumento. Isso significa, por exemplo, que um teste com o expectation abaixo falharia porque a string "5" não é igual ao número 5.
+
+expect(5).toBe("5")
+
+-- toEqual -- 
+
+test('array and object equality', () => {
+    const arr = [1, 2 ,3];
+    const obj = { a: 1, b: 2, c: 3};
+  
+    expect(arr).toBe([1, 2, 3]); // fails
+    expect(obj).toBe({ a: 1, b: 2, c: 3}); // fails
+    expect(arr).toEqual([1, 2, 3]); // OK
+    expect(obj).toEqual({ a: 1, b: 2, c: 3}); // OK
+  });
+
+- Valores booleanos
+null , undefined e false são valores falsy . Isso significa que são tratados como false sempre que se espera um valor booleano, como em condicionais. Às vezes, porém, é preciso distinguir entre eles. Jest fornece matchers específicos para cada um. Leia mais sobre eles na documentação do Jest .
+- Números
+Há matchers para as principais formas de comparar números.
+- Strings
+Para comparar string com expressões regulares, utilize o matcher toMatch .
+- Arrays
+Você pode verificar se um array contém um item em particular utilizando toContain . Para verificar que um item possui uma estrutura mais complexa, utilize toContainEqual . toHaveLength permite facilmente verificar o tamanho de um array ou de uma string.
+- Objetos
+É bastante comum testar se um objeto possui uma propriedade específica. O matcher toHaveProperty é ideal para esses casos.
+
+- Exceções 
+
+toThrow testa se uma função lança um erro quando é executada. Para testar se uma função está retornando um erro, é importante estar atento à sintaxe do .toThrow :
+
+const multiplyByTwo = (number) => {
+    if (!number) {
+      throw new Error('number é indefinido')
+    }
+    return number * 2;
+  };
+  multiplyByTwo(4);
+  
+  test('testa se multiplyByTwo retorna o resultado da multiplicação', () => {
+    expect(multiplyByTwo(4)).toBe(8);
+  });
+  test('testa se é lançado um erro quando number é indefinido', () => {
+    expect(() => { multiplyByTwo() }).toThrow();
+  });
+  test('testa se a mensagem de erro é "number é indefinido"', () => {
+    expect(() => { multiplyByTwo() }).toThrowError(new Error('number é indefinido'));
+  });
+
+- not
+
+not permite testar o oposto de algo. Por exemplo, este código testa que domingo é um dia da semana, mas não um dia útil:
+
+const workDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+const weekDays = ['Sunday', ...workDays, 'Saturday'];
+
+test('Sunday is a week day', () => {
+  expect(weekDays).toContain('Sunday');
+});
+
+test('Sunday is not a workday', () => {
+  expect(workDays).not.toContain('Sunday');
+});
