@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import EstadoFav from "./estadoFv";
+import Idade from "./idade";
 
 class Xablau extends Component {
     constructor () {
@@ -26,15 +28,8 @@ class Xablau extends Component {
             <div>
         <h1>Estados e React - Tecnologia fantástica ou reagindo a regionalismos?</h1>
         <form className="form">
-          <label>
-            Diga qual o seu Estado favorito! De React ou do Brasil, você decide! =)
-              <textarea name="estadoFav" value={this.state.estadoFav} onChange={this.handleChange} />
-          </label>
-          <input
-            type="number"
-            name="idade"
-            onChange={this.handleChange}
-          />
+            <EstadoFav value={this.state.estadoFav} handleChange={this.handleChange}/>
+            <Idade value={this.state.idade} handleChange={this.handleChange}/>
           <input
             type="checkbox"
             name="vaiComparecer"
